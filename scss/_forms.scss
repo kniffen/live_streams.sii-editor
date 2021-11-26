@@ -1,0 +1,68 @@
+input[type="text"],
+input[type="number"] {
+  color: var(--color-white);
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  inset-inline-start: -200vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container.visible {
+  inset-inline-start: 0;
+}
+
+#add-edit-form {
+  background-color: var(--color-black);
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 40em;
+  gap: 0 1em;
+  justify-content: center;
+
+  h2 {
+    margin-block-start: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;  
+  }
+
+  label,
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+  }
+
+  label {
+    text-transform: uppercase;
+    margin-block-end: .5em;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    background-color: var(--color-gray-600);
+    color: var(--color-white);
+    margin-block-end: 2em;
+  }
+
+  label[for="language"],
+  label[for="bitrate"],
+  input#language,
+  input#bitrate {
+    width: calc(50% - .5em);
+  }
+
+  input[type="submit"],
+  input[type="button"] {
+    width: 8em;
+    margin-block-start: 1em;
+  }
+}

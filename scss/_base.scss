@@ -1,0 +1,84 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+.site-container {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-black);
+  margin: 0;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.site-main {
+  flex: 1;
+  overflow-y: auto;
+  margin-block-start: 1em;
+  position: relative;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  background-color: var(--color-gray-800)
+}
+
+input,
+button,
+.btn,
+.cta {
+  font-size: var(--font-size);
+  border: none;
+  padding: 0.512em 1em;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.cta {
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-gray-400);
+  }
+}
+
+input[type="submit"],
+input[type="button"].cta,
+.cta {
+  background-color: var(--color-blue);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--color-gray-600);
+  border-inline-start: 1px solid var(--color-gray-600);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-400);
+  border-inline-start: 1px solid var(--color-gray-600);
+}

@@ -1,0 +1,39 @@
+.welcome-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  inset: 0;
+  inset-inline-start: -200vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-container.visible {
+  inset-inline-start: 0;
+}
+
+.welcome {
+  background-color: var(--color-black);
+  padding: 2em;
+  text-align: center;
+  width: 40em;
+
+  h2 {
+    text-transform: uppercase;
+    margin-block-end: 2em;
+  }
+
+  p {
+    margin-block-end: 2em;
+  }
+
+  .cta,
+  input[type="button"] {
+    display: inline-block;
+    width: 12em;
+    margin-block-end: 1em;
+    margin-inline: .5em;
+  }
+}

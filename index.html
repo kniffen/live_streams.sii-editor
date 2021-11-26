@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>live_streams.sii editor</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Edit the live_streams.sii radio stations file for Euro Truck Simulator 2 or American Truck Simulator."/>
+    <meta name="msapplication-TileColor" content="#028AFE">
+    <meta name="theme-color" content="#028AFE">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <h1 class="site-title">live_streams.sii editor</h1>
+
+        <input id="playlist-name" type="text" />
+        <button class="add-station-btn">Add station</button>
+        <button class="clear-all-btn">Clear all</button>
+        
+        <label for="import-file" class="import-btn btn">Import</label>
+        <input type="file" id="import-file" accept=".sii"/>
+
+        <button class="export-btn cta">export</button>
+      </header>
+
+      <main class="site-main">
+        <ul class="station-list-header">
+          <li class="station-list-item">
+            <span class="station-list-item__number">#</span>
+            <span class="station-list-item__favorite"><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span class="station-list-item__name">Name</span>
+            <span class="station-list-item__genre">Genre</span>
+            <span class="station-list-item__language">Language</span>
+            <span class="station-list-item__bitrate">Bitrate</span>
+            <span class="station-list-item__controls"></span>
+          </li>
+        </ul>
+
+        <ul class="station-list">
+        </ul>
+      </main>
+
+      <div class="player">
+        <i class="player-play-pause-toggle fa fa-play"></i>
+
+        <div class="player-status">
+          <p>Now playing</p>
+          <p></p>
+        </div>
+        <div class="player-volume">
+          <i class="player-mute-unmute-toggle fa fa-volume-up"></i>
+          <div class="volume-bar"></div>
+        </div>
+        <audio class="player-audio"></audio>
+      </div>
+
+      <div class="form-container">
+        <form id="add-edit-form">
+          <h2>Add station</h2>
+
+          <input name="index" id="index" type="number" required hidden/>
+
+          <label for="url">URL *</label>
+          <input name="url" id="url" type="text" required/>
+
+          <label for="name">Name *</label>
+          <input name="name" id="name" type="text" required/>
+
+          <label for="genre">Genre</label>
+          <input name="genre" id="genre" type="text"/>
+
+          <label for="language">Language</label>
+          <label for="bitrate">Bitrate</label>
+          <input name="language" id="language" type="text"/>
+          <input name="bitrate" id="bitrate" type="number" min="0" max="9999" value="0"/>
+
+          <input type="submit" value="Save" />
+          <input type="button" id="cancel-add-edit-btn" value="Cancel" />
+        </form>
+      </div>
+
+      <div class="welcome-container">
+        <div class="welcome">
+          <h2>Welcome to the live_streams.sii Editor</h2>
+          <p>This editor lets you easily configure the live_streams.sii radio stations file for Euro Truck Simulator 2 and American Truck Simulator.</p>
+          
+          <label for="import-file" class="cta">Import file</label>
+
+          <input type="button" value="Blank playlist" id="welcome-new-btn" />
+          <input type="button" value="ETS2 default" id="welcome-ets2-btn" />
+          <input type="button" value="ATS default" id="welcome-ats-btn" />
+        </div>
+      </div>
+
+      <div class="warning-container">
+        <div class="warning">
+          <h2></h2>
+          <p></p>
+          <input type="button" value="Dismiss" id="dismiss-warning-btn" />
+        </div>
+      </div>
+
+      <div class="privacy">
+        <h2>Notice</h2>
+        <p>live_streams.sii editor uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localStorage</a> to store the state of your playlist.</p>
+        <input type="button" value="I'm ok with that" class="cta" id="accept-privacy"/>
+        <input type="button" value="Please don't" id="deny-privacy"/>
+      </div>
+      
+    </div>
+
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>

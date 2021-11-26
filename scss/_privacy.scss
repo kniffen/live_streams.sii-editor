@@ -1,0 +1,17 @@
+.privacy {
+  background-color: var(--color-black);
+  position: fixed;
+  inset-block-end: 2em;
+  inset-inline-end: 2em;
+  padding: 2em;
+  text-align: center;
+  display: none;
+
+  h2 {
+    text-transform: uppercase
+  }
+
+  p {
+    margin-block-end: 2em;
+  }
+}

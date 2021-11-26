@@ -1,0 +1,26 @@
+{
+  "name": "live_streams.sii-editor",
+  "version": "1.0.0",
+  "description": "Easy interface for editing the live_streams.sii file in ETS2 and ATS",
+  "private": true,
+  "scripts": {
+    "scss": "npx sass ./scss/style.scss ./style.css -w --no-source-map",
+    "serve": "npx live-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kniffen/live_streams.sii-editor.git"
+  },
+  "keywords": [],
+  "author": "Kniffen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kniffen/live_streams.sii-editor/issues"
+  },
+  "homepage": "https://github.com/kniffen/live_streams.sii-editor#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.43.4"
+  }
+}

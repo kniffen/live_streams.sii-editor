@@ -1,0 +1,25 @@
+html {
+  font-family: var(--font-family);
+}
+
+body {
+  font-size: var(--font-size);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-white);
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline
+  }
+}
+
+p {
+  line-height: 1.5;
+}
